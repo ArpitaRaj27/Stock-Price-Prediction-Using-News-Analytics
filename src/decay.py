@@ -131,3 +131,4 @@ def fit_by_group(cars: pd.DataFrame, group_col: str) -> pd.DataFrame:
         n_events = sub[["ticker", "event_date"]].drop_duplicates().shape[0]
         rows.append({group_col: grp, "n_events": n_events, **fit})
     return pd.DataFrame(rows).sort_values("half_life")
+
